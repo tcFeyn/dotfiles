@@ -182,11 +182,6 @@ alias \
     fm='~/.config/vifm/scripts/vifmrun'\
     d='cd "$(awk "{print $1}" ~/.config/bmdirs | fzf | sed "s|~|$HOME|")"'
 
-# VNC & SSH
-alias\
-    vnc-pi='vncviewer 192.168.1.253:5900'\
-    sspi='lxterminal -e ssh pi'
-
 
 # extract files
 ex ()
