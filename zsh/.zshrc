@@ -96,9 +96,9 @@ alias \
 alias \
     cd-='cd ..'\
     grep='grep --color=auto'\
-    cp='cp -iv'\
-    mv='mv -iv'\
-    rm='rm -vi'\
+    cp='cp -v'\
+    mv='mv -v'\
+    rm='rm -v'\
     mkdir='mkdir -pv'
 
 # System space and hardware
