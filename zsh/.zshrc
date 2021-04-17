@@ -98,7 +98,7 @@ alias \
     grep='grep --color=auto'\
     cp='cp -iv'\
     mv='mv -iv'\
-    rm='rm -vI'\
+    rm='rm -vi'\
     mkdir='mkdir -pv'
 
 # System space and hardware
@@ -117,16 +117,11 @@ alias \
     cstart='nvim ~/.config/bspwm/autostart.sh'\
     czsh='nvim ~/.config/zsh/.zshrc'\
     cnvim='nvim ~/.config/nvim/init.vim'\
-    cplug='nvim ~/.config/nvim/vim-plug/plugins.vim'\
     cala='nvim ~/.config/alacritty/alacritty.yml'\
     cki='nvim ~/.config/kitty/kitty.conf'\
     cro='nvim ~/.config/rofi/config.rasi'\
     cpi='nvim ~/.config/picom.conf'\
     cvifm='nvim ~/.config/vifm/vifmrc'
-
-# Folders
-alias \
-    dscr='cd ~/Docs/Scripts/'
 
 # Services
 alias \
@@ -181,7 +176,6 @@ alias \
 alias \
     fm='~/.config/vifm/scripts/vifmrun'\
     d='cd "$(awk "{print $1}" ~/.config/bmdirs | fzf | sed "s|~|$HOME|")"'
-
 
 # extract files
 ex ()
