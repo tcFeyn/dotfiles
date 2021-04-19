@@ -28,6 +28,11 @@ _comp_options+=(globdots) # Include hidden files.
 bindkey -v
 export KEYTIMEOUT=1
 
+# Bind Backspace
+bindkey -M emacs '^?' backward-delete-char
+bindkey -M viins '^?' backward-delete-char
+bindkey -M vicmd '^?' backward-delete-char
+
 # Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
@@ -74,108 +79,8 @@ export LESS_TERMCAP_us=$(tput smul; tput bold; tput setaf 1) # red
 # End bold, blinking standout, underline
 export LESS_TERMCAP_me=$(tput sgr0)
 
-# Aliases
 
-alias nv='nvim'
-
-# Ls
-#alias \
-#    ls='ls -hN --color=auto --group-directories-first'\
-#    l='ls'\
-#    ll='ls -l'\
-#    lsa='ls -alps'
-
-# Lsd
-alias \
-    ls='lsd -hv'\
-    l='ls'\
-    ll='ls -l'\
-    lsa='ls -lavF'
-
-# Colors and Verbose output
-alias \
-    cd-='cd ..'\
-    grep='grep --color=auto'\
-    cp='cp -v'\
-    mv='mv -v'\
-    rm='rm -v'\
-    mkdir='mkdir -pv'
-
-# System space and hardware
-alias \
-    df='df -h'\
-    free='free -mth'\
-    du='du -sh'\
-    hw="hwinfo --short"
-
-# Configs
-alias \
-    cpol='nvim ~/.config/polybar/config'\
-    cbsp='nvim ~/.config/bspwm/bspwmrc'\
-    csxh='nvim ~/.config/sxhkd/sxhkdrc'\
-    cterm='nvim ~/.config/termite/config'\
-    cstart='nvim ~/.config/bspwm/autostart.sh'\
-    czsh='nvim ~/.config/zsh/.zshrc'\
-    cnvim='nvim ~/.config/nvim/init.vim'\
-    cala='nvim ~/.config/alacritty/alacritty.yml'\
-    cki='nvim ~/.config/kitty/kitty.conf'\
-    cro='nvim ~/.config/rofi/config.rasi'\
-    cpi='nvim ~/.config/picom.conf'\
-    cvifm='nvim ~/.config/vifm/vifmrc'
-
-# Services
-alias \
-    start='sudo systemctl start' \
-    status='sudo systemctl status' \
-    restart='sudo systemctl restart' \
-    stop='sudo systemctl stop' \
-    reload='sudo systemctl reload'
-
-# Pacman
-alias \
-    pac='sudo pacman'\
-    pS='pac -S'\
-    pR='pac -Rns'\
-    pSs='pac -Ss'\
-    pQ='pacman -Qs'\
-    pC='pac -Rns $(pacman -Qdtq)'\
-    pSc='pac -Sc'
-
-# Yay
-alias \
-    yS='yay -S'\
-    yR='yay -Rns'\
-    ySs='yay -Ss'\
-    ySc='yay -Sc'\
-    yYc='yay -Yc'\
-
-# Update Arch Mirror List, System & database
-alias \
-    mirrors='sudo reflector -c Portugal -c Spain -c Germany -c UK -a 12 -p https --sort rate --save /etc/pacman.d/mirrorlist'\
-    update='pac -Syu && yay -Su && echo "#!/bin/sh
-echo  0 " > ~/Docs/Scripts/dwmblocks/s-packages && pkill -RTMIN+4 dwmblocks'\
-    check='check_updates '\
-    updatedb='sudo updatedb'
-
-
-# Network Manager
-alias \
-    nm-scan='nmcli device wifi list'\
-    nm-connect='nmcli device wifi connect'\
-    nm-disconnect='nmcli device disconnect'\
-    nm-show='nmcli connection show'\
-    nm-status='nmcli device'\
-    nm-wifi-off='nmcli radio wifi off'\
-    nm-wifi-on='nmcli radio wifi on'
-
-# Youtube-dl
-alias \
-    ydl-audio='youtube-dl -x --audio-format mp3 --audio-quality 0'
-
-# Scripts
-alias \
-    fm='~/.config/vifm/scripts/vifmrun'\
-    d='cd "$(awk "{print $1}" ~/.config/bmdirs | fzf | sed "s|~|$HOME|")"'
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/aliasrc"
 
 # extract files
 ex ()
@@ -206,9 +111,5 @@ ex ()
 # Zsh Plugins
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
-
-# Wal Theme
-#(cat ~/.cache/wal/sequences &)
-#source ~/.cache/wal/colors-tty.sh
 
 neofetch
