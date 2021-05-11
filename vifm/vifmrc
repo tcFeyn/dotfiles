@@ -441,9 +441,9 @@ nnoremap q :q<cr>
 " Paths
 nnoremap gh :cd ~/<cr>
 nnoremap ph :cd ~/Docs/Phone<cr>
-nnoremap srp :cd ~/Docs/Scripts<cr>
+nnoremap gsrp :cd ~/Docs/Scripts<cr>
 nnoremap git :cd ~/Docs/Github<cr>
-nnoremap srv :cd ~/Docs/Server<cr>
+nnoremap gsrv :cd ~/Docs/Server<cr>
 nnoremap bak :cd ~/Docs/Server/Backups<cr>
 nnoremap gfl :cd ~/Docs/Faculdade/Licenciatura/1_ano<cr>
 nnoremap gp :cd ~/Pictures<cr>
@@ -479,7 +479,7 @@ nnoremap grm :cd /media<cr>
 " ICONS
 
 " file types
-set classify='ﱮ :dir:/, :exe:, :reg:, :link:'
+set classify=' :dir:/, :exe:, :reg:, :link:'
 " various file names
 set classify+='::../::/, ::*.[hc]pp::, ::*.[hc]::, ::/^copying|license$/::, ::.git/,,*.git/::, ::*.epub,,*.fb2,,*.djvu::'
 " archives

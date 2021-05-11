@@ -1,6 +1,9 @@
 #!/bin/sh
 
-alias nv='nvim'
+# Programms
+alias \
+    nv='nvim' \
+    g='git'
 
 # Ls
 #alias \
