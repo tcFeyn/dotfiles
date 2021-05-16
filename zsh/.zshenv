@@ -13,7 +13,7 @@ export GTK3_RC_FILES="$XDG_CONFIG_HOME"/gtk-3.0/settings.ini
 #export QT_QPA_PLATFORMTHEME=gtk2
 export LANG=en_US.UTF-8
 
-source "$HOME/.cargo/env"
+#source "$HOME/.cargo/env"
 
 # Default Apps
 export EDITOR="nvim"
