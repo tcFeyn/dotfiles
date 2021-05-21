@@ -26,18 +26,18 @@ export VIDEO="mpv"
 export IMAGE="sxiv"
 export COLORTERM="truecolor"
 export OPENER="xdg-opener"
-export WM="dwm"
+#export WM="dwm"
 export CODEEDITOR="code"
 
 # Clipmenu
-export CM_SELECTIONS="clipboard"
-export CM_DEBUG=1
-export CM_OUTPUT_CLIP=0
-export CM_MAX_CLIPS=50
-export CM_HISTLENGTH=5
-export CM_LAUNCHER="dmenu"
-export CM_IGNORE_WINDOW="(KeePassXC)"
-
-if [[ "$(tty)" = "/dev/tty1" ]]; then
-    pgrep dwm || startx
-fi
+#export CM_SELECTIONS="clipboard"
+#export CM_DEBUG=1
+#export CM_OUTPUT_CLIP=0
+#export CM_MAX_CLIPS=50
+#export CM_HISTLENGTH=5
+#export CM_LAUNCHER="dmenu"
+#export CM_IGNORE_WINDOW="(KeePassXC)"
+#
+#if [[ "$(tty)" = "/dev/tty1" ]]; then
+#    pgrep dwm || startx
+#fi
