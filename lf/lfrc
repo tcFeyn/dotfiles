@@ -5,6 +5,7 @@ set hidden true
 set drawbox true
 set icons true
 set ignorecase true
+set info size:time
 
 # Custom Functions
 cmd open ${{

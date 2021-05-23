@@ -118,11 +118,11 @@ bindsym $mod+ctrl+F1 restart
 bindsym $mod+ctrl+F3 exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # Window Colors
-set $bgcolor    #b3deef
+set $bgcolor    #81A1C1
 set $ibgcolor   #282828
 set $textcolor  #ffffff
 set $itextcolor #969696
-set $ubgcolor   #ff0000
+set $ubgcolor   #BF616A
 
 # i3blocks
 bar {
@@ -185,6 +185,8 @@ for_window [class="Gpick"] floating enable
 # Lxappearance
 for_window [class="Lxappearance"] floating enable
 
+# Pavucontrol
+for_window [class="Pavucontrol"] floating enable
 
 # --- Keymaps --- #
 
@@ -205,11 +207,6 @@ bindsym XF86AudioMute exec amixer -D default set Master 1+ toggle && pkill -SIGR
 bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPlay exec playerctl play-pause
-
- exec --no-startup-id playerctl --player=spotify previous
- exec --no-startup-id playerctl --player=spotify play-pause
- exec --no-startup-id playerctl --player=spotify next
-
 
 # Print Key
 bindsym Print exec flameshot full -p ~/Pictures && notify-send -u normal 'Print Screen Taken' '' --icon='~/.config/dunst/icons/print.png'
@@ -280,4 +277,4 @@ bindsym $mod+Mod1+p exec gpick
 
 
 ## -- Execute Programs --- #
-exec --no-startup-id python3 $HOME/.config/i3/i3-swallow.py
+#exec --no-startup-id python3 $HOME/.config/i3/i3-swallow.py
