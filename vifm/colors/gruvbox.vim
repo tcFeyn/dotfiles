@@ -1,4 +1,4 @@
-" gruvbox color scheme approximation for vifm
+" Gruvbox
 
 " Reset all styles first
 highlight clear
