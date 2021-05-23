@@ -48,7 +48,7 @@ alias \
     cki='nvim ~/.config/kitty/kitty.conf'\
     cro='nvim ~/.config/rofi/config.rasi'\
     cpi='nvim ~/.config/picom.conf'\
-    cvifm='nvim ~/.config/vifm/vifmrc'
+    cvifm='~/.config/vifm/vifmrc'
 
 # Dirs
 alias \
@@ -85,9 +85,10 @@ alias \
 # Update Arch Mirror List, System & database
 alias \
     mirrors='sudo reflector -c Portugal -c Spain -c Germany -c UK -a 12 -p https --sort rate --save /etc/pacman.d/mirrorlist'\
-    update='pac -Syu && yay -Su && echo "#!/bin/sh
-echo  0 " > ~/Docs/Scripts/dwmblocks/s-packages && pkill -RTMIN+4 dwmblocks'\
-    check='check_updates '\
+    update='check_updates'
+#    update='pac -Syu && yay -Su && echo "#!/bin/sh
+#echo  0 " > ~/Docs/Scripts/dwmblocks/s-packages && pkill -RTMIN+4 dwmblocks'\
+    #check='check_updates '\
     updatedb='sudo updatedb'
 
 
@@ -107,5 +108,5 @@ alias \
 
 # Scripts
 alias \
-    fm='~/.config/vifm/scripts/vifmrun'\
+    fm='lf-ueberzug'\
     d='cd "$(awk "{print $1}" ~/.config/bmdirs | fzf | sed "s|~|$HOME|")"'

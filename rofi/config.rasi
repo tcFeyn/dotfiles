@@ -1,15 +1,20 @@
 configuration {
 modi: "drun,run,window";
 width: 50;
-lines: 20;
+lines: 10;
 columns: 1;
-font: "FantasqueSansMono Nerd Font 14";
+font: "FantasqueSansMono Nerd Font 13";
 location: 0;
 padding: 5;
 yoffset: 0;
 xoffset: 0;
 fixed-num-lines: true;
 show-icons: true;
+display-ssh:    "";
+display-run:    "";
+display-drun:   " ";
+display-window: "";
+display-combi:  "";
 terminal: "kitty";
 /*	run-command: "{cmd}";*/
 /*	run-list-command: "";*/
@@ -31,7 +36,7 @@ fullscreen: false;
 fake-transparency: true;
 click-to-exit: true;
 show-match: true;
-theme: "~/.config/rofi/themes/gruvbox-dark-hard.rasi";
+theme: "~/.config/rofi/themes/nord.rasi";
 /*	parse-hosts: false;*/
 /*	parse-known-hosts: true;*/
 combi-modi: "window,run";

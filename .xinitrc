@@ -45,11 +45,11 @@ xinput --set-prop "SOAI Gaming Mouse" "libinput Accel Speed" -1
 
 # Screen Settings
 xrandr --output DisplayPort-0 --primary --mode 1920x1080 --rate 144.00 --pos 0x0 --rotate normal
-xrandr --output HDMI-A-0 --mode 1280x1024 --rate 75.02 --pos 1920x0 --rotate normal
+#xrandr --output DisplayPort-1 --primary --mode 1920x1080 --rate 144.00 --pos 0x0 --rotate normal
 
 # Startup Apps
 picom --config $HOME/.config/picom.conf &
-feh --bg-fill ~/Pictures/PC/wlp12.png &
+feh --bg-fill ~/Pictures/PC/anime.png &
 redshift -P -O 4000 &
 mpd &
 flameshot &
@@ -60,13 +60,14 @@ xfce4-power-manager &
 /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
 dunst &
 syncthing -no-browser &
-~/Docs/Scripts/check_updates &
-dwmblocks &
+#~/Docs/Scripts/check_updates &
 
-# Keep dwm running
-while true; do
-    dwm > /dev/null 2>&1
-done
+# Dwm
+#dwmblocks &
+#while true; do
+#    dwm > /dev/null 2>&1
+#done
+#exec dwm
 
-# Launch DWM
-exec dwm
+# i3
+exec i3
