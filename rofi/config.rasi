@@ -2,7 +2,7 @@ configuration {
 modi: "drun,run,window";
 width: 50;
 lines: 10;
-columns: 1;
+columns: 2;
 font: "FantasqueSansMono Nerd Font 13";
 location: 0;
 padding: 5;

@@ -1,6 +1,3 @@
-# i3 config file (v4)
-# Please see https://i3wm.org/docs/userguide.html for a complete reference!
-
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -22,7 +19,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 floating_modifier $mod
 
 # Start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec $TERMINAL
 
 # kill focused window
 bindsym $mod+q kill
@@ -152,7 +149,7 @@ gaps inner 10
 gaps outer 0
 
 #smart_gaps on
-#smart_borders on
+smart_borders on
 
 # --- Window Rules --- #
 
