@@ -1,5 +1,4 @@
 " Gruvbox
-<<<<<<< HEAD:vifm/colors/gruvbox.vim
 
 " Default = -1 = None, can be used for transparency or default color
 " Black = 0
@@ -17,8 +16,6 @@
 " reverse or inverse
 " standout
 " none
-=======
->>>>>>> a78b9882259ae6b26d5209472c06fe6395f922f3:vifm/colors/gruvbox.vifm
 
 " Reset all styles first
 highlight clear

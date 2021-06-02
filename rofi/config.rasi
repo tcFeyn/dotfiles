@@ -1,13 +1,8 @@
 configuration {
 modi: "drun,run,window";
 width: 50;
-<<<<<<< HEAD
 lines: 15;
 columns: 1;
-=======
-lines: 10;
-columns: 2;
->>>>>>> a78b9882259ae6b26d5209472c06fe6395f922f3
 font: "FantasqueSansMono Nerd Font 13";
 location: 0;
 padding: 5;

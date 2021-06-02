@@ -1,6 +1,5 @@
 " Onedark
 
-<<<<<<< HEAD
 " Default = -1 = None, can be used for transparency or default color
 " Black = 0
 " Red = 1
@@ -18,8 +17,6 @@
 " standout
 " none
 
-=======
->>>>>>> a78b9882259ae6b26d5209472c06fe6395f922f3
 " Reset all styles first
 highlight clear
 
