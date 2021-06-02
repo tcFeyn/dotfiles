@@ -1,4 +1,21 @@
-" gruvbox color scheme approximation for vifm
+" Gruvbox
+
+" Default = -1 = None, can be used for transparency or default color
+" Black = 0
+" Red = 1
+" Green = 2
+" Yellow = 3
+" Blue = 4
+" Magenta = 5
+" Cyan = 6
+" White = 7
+
+" STYLES
+" bold
+" underline
+" reverse or inverse
+" standout
+" none
 
 " Reset all styles first
 highlight clear

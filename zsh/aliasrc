@@ -3,6 +3,7 @@
 # Programms
 alias \
     nv='nvim' \
+    v='vim' \
     g='git'
 
 # Ls
@@ -43,6 +44,7 @@ alias \
     cterm='nvim ~/.config/termite/config'\
     cstart='nvim ~/.config/bspwm/autostart.sh'\
     czsh='nvim ~/.config/zsh/.zshrc'\
+    calias='nvim ~/.config/zsh/aliasrc'\
     cnvim='nvim ~/.config/nvim/init.vim'\
     cala='nvim ~/.config/alacritty/alacritty.yml'\
     cki='nvim ~/.config/kitty/kitty.conf'\
@@ -54,7 +56,8 @@ alias \
 alias \
     dgit='cd ~/Docs/Github'\
     dfl='cd ~/Docs/Faculdade/Licenciatura/1_ano'\
-    ddwm='cd ~/Docs/Github/Suckless'
+    ddwm='cd ~/Docs/Github/Suckless'\
+    dnvim='cd ~/.config/nvim'
 
 # Services
 alias \

@@ -1,9 +1,9 @@
 configuration {
 modi: "drun,run,window";
 width: 50;
-lines: 20;
+lines: 15;
 columns: 1;
-font: "FantasqueSansMono Nerd Font 14";
+font: "FantasqueSansMono Nerd Font 13";
 location: 0;
 padding: 5;
 yoffset: 0;
