@@ -54,7 +54,7 @@ set norunexec
 
 " Selected color scheme
 
-colorscheme gruvbox
+colorscheme onedark
 
 " Format for displaying time in file list. For example:
 " TIME_STAMP_FORMAT=%m/%d-%H:%M
@@ -154,6 +154,14 @@ command! reload :write | restart
 " Pdf
 filextype *.pdf mupdf
 fileviewer *.pdf pdftotext -nopgbrk %c -
+
+filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
+        \ {View in feh}
+        \ swallow feh %f,
+        \ {View in gpicview}
+        \ gpicview %c,
+        \ {View in shotwell}
+        \ shotwell,
 
 " PostScript
 filextype *.ps,*.eps,*.ps.gz
