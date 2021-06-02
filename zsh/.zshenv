@@ -1,5 +1,5 @@
 # Paths
-export PATH=/opt:/bin:~/Docs/Scripts:~/Docs/Scripts/blocks:$HOME/Docs/Scripts/Lf:$PATH
+export PATH=/opt:/bin:~/Docs/Scripts/:~/Docs/Scripts/Dmenu:~/Docs/Scripts/Lf:~/Docs/Scripts/Utils:~/Docs/Scripts/blocks:~/Docs/Scripts/Fzf:$PATH
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
@@ -10,6 +10,7 @@ export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
 export ANDROID_SDK_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/android"
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
 export GTK3_RC_FILES="$XDG_CONFIG_HOME"/gtk-3.0/settings.ini
+export XCURSOR_PATH=${XCURSOR_PATH}:/usr/share/icons/capitaine-cursors-light
 #export QT_QPA_PLATFORMTHEME=gtk2
 export LANG=en_US.UTF-8
 

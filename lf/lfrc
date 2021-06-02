@@ -92,10 +92,10 @@ map d
 map c
 map e
 map f
+map u
 
 # File Openers
 map ee $$EDITOR "$f"
-map u $view "$f"
 
 # Archive Mappings
 map az zip

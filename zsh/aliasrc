@@ -3,7 +3,7 @@
 # Programms
 alias \
     nv='nvim' \
-    v='vim' \
+    v='vim'\
     g='git'
 
 # Ls
@@ -31,7 +31,7 @@ alias \
 
 # System space and hardware
 alias \
-    df='df -h'\
+    df='dfc'\
     free='free -mth'\
     du='du -sh'\
     hw="hwinfo --short"
