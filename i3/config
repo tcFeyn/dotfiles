@@ -158,7 +158,7 @@ bar {
 for_window [class=".*"] border pixel 2
 
 #class                      background      border          text                indicator
-client.focused              $ibgcolor       $bgcolor       $textcolor          $bgcolor
+client.focused              $ibgcolor       $bgcolor        $textcolor          $bgcolor
 client.unfocused            $ibgcolor       $ibgcolor       $itextcolor         $ibgcolor
 client.focused_inactive     $ibgcolor       $ibgcolor       $itextcolor         $ibgcolor
 client.urgent               $ubgcolor       $ubgcolor       $textcolor          $bgcolor

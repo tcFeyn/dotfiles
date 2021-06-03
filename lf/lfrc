@@ -11,7 +11,7 @@ set info size:time
 cmd open ${{
     case $(file --mime-type "$f" -bL) in
         text/*|application/json) $EDITOR "$f";;
-        *) xdg-open "$f" ;;
+        *) swallow  xdg-open "$f" ;;
     esac
 }}
 
