@@ -44,8 +44,8 @@ xset b off &
 xinput --set-prop "SOAI Gaming Mouse" "libinput Accel Speed" -1
 
 # Screen Settings
-xrandr --output DisplayPort-0 --primary --mode 1920x1080 --rate 144.00 --pos 1920x0 --rotate normal
 xrandr --output DisplayPort-1 --mode 1920x1080 --rate 144.00 --pos 0x0 --rotate normal
+xrandr --output DisplayPort-0 --primary --mode 1920x1080 --rate 144.00 --pos 1920x0 --rotate normal
 
 xrdb -merge ~/.Xresources &
 
@@ -61,7 +61,7 @@ xfce4-power-manager &
 #nm-applet &
 /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
 dunst &
-#syncthing -no-browser &
+syncthing -no-browser &
 #~/Docs/Scripts/check_updates &
 
 # Update Dir list
