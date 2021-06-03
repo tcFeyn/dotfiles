@@ -10,7 +10,7 @@ export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
 export ANDROID_SDK_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/android"
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
 export GTK3_RC_FILES="$XDG_CONFIG_HOME"/gtk-3.0/settings.ini
-export XCURSOR_PATH=${XCURSOR_PATH}:/usr/share/icons/capitaine-cursors-light
+#export XCURSOR_PATH=${XCURSOR_PATH}:/usr/share/icons/capitaine-cursors-light
 #export QT_QPA_PLATFORMTHEME=gtk2
 export LANG=en_US.UTF-8
 

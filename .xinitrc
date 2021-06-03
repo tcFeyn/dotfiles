@@ -51,7 +51,7 @@ xrdb -merge ~/.Xresources &
 
 # Startup Apps
 picom --config $HOME/.config/picom.conf &
-feh --bg-fill ~/Docs/Github/Color-schemes/Wallpapers/wlp1.png &
+feh --bg-fill ~/Docs/Github/Color-schemes/Wallpapers/wlp1.png --bg-fill ~/Docs/Github/Color-schemes/Wallpapers/wlp19.png &
 redshift -P -O 5000 &
 mpd &
 flameshot &
@@ -62,7 +62,6 @@ xfce4-power-manager &
 /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
 dunst &
 syncthing -no-browser &
-~/Docs/Scripts/check_updates &
 
 # Update Dir list
 find /home/david/{Downloads,Pictures,Docs/{Github,Phone,Scripts,Server,Faculdade}} -type d | grep -v .git | grep -v CTeSP > /home/david/.config/dirs.txt

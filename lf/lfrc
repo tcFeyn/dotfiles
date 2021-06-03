@@ -11,7 +11,8 @@ set info size:time
 cmd open ${{
     case $(file --mime-type "$f" -bL) in
         text/*|application/json) $EDITOR "$f";;
-        *) swallow  xdg-open "$f" ;;
+        *) xdg-open "$f" & disown %xdg-open;; # Detach process from lf
+        #*) swallow xdg-open "$f" # Swallow process
     esac
 }}
 

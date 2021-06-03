@@ -50,7 +50,9 @@ alias \
     cki='nvim ~/.config/kitty/kitty.conf'\
     cro='nvim ~/.config/rofi/config.rasi'\
     cpi='nvim ~/.config/picom.conf'\
-    cvifm='~/.config/vifm/vifmrc'
+    cvifm='nvim ~/.config/vifm/vifmrc'\
+    ci3='nvim ~/.config/i3/config'\
+    clf='nvim ~/.config/lf/lfrc'
 
 # Dirs
 alias \
