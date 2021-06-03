@@ -51,7 +51,7 @@ xrdb -merge ~/.Xresources &
 
 # Startup Apps
 picom --config $HOME/.config/picom.conf &
-feh --bg-fill ~/Pictures/PC/anime.png &
+feh --bg-fill ~/Docs/Github/Color-schemes/Wallpapers/wlp1.png &
 redshift -P -O 5000 &
 mpd &
 flameshot &
