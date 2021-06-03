@@ -88,11 +88,10 @@ alias \
 # Update Arch Mirror List, System & database
 alias \
     mirrors='sudo reflector -c Portugal -c Spain -c Germany -c UK -a 12 -p https --sort rate --save /etc/pacman.d/mirrorlist'\
-    update='pac -Syu && yay -Su && pkill -SIGRTMIN+3 i3blocks'
-#    update='pac -Syu && yay -Su && echo "#!/bin/sh
-#echo  0 " > ~/Docs/Scripts/dwmblocks/s-packages && pkill -RTMIN+4 dwmblocks'\
-    #check='check_updates '\
+    update='pac -Syu && yay -Su && check_updates'\
     updatedb='sudo updatedb'
+    #pkill -RTMIN+4 dwmblocks'\
+    #check='check_updates '\
 
 
 # Network Manager
