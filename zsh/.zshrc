@@ -82,6 +82,7 @@ export LESS_TERMCAP_me=$(tput sgr0)
 
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/aliasrc"
 source "${XDG_CONFIG_HOME:-$HOME/.config}/lf-shellcd/lf-shellcd"
+#source /usr/share/nvm/init-nvm.sh
 
 # extract files
 ex ()
