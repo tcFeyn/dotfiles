@@ -41,37 +41,29 @@ xsetroot -cursor_name left_ptr & # set mouse cursor
 xset r on &
 xset r rate 300 50 &
 xset b off &
-xinput --set-prop "SOAI Gaming Mouse" "libinput Accel Speed" -1
+xinput --set-prop "SteelSeries SteelSeries Rival 3" "libinput Accel Speed" -1
 
 # Screen Settings
-xrandr --output DisplayPort-1 --mode 1920x1080 --rate 144.00 --pos 0x0 --rotate normal
-xrandr --output DisplayPort-0 --primary --mode 1920x1080 --rate 144.00 --pos 1920x0 --rotate normal
+xrandr --output DisplayPort-1 --primary --mode 1920x1080 --rate 144.00 --pos 0x0 --rotate normal
+xrandr --output DisplayPort-0 --mode 1920x1080 --rate 144.00 --pos 1920x0 --rotate normal
 
 xrdb -merge ~/.Xresources &
 
 # Startup Apps
 picom --config $HOME/.config/picom.conf &
 feh --bg-fill ~/Docs/Github/Color-schemes-And-Wallpapers/Wallpapers/wlp1.png --bg-fill ~/Docs/Github/Color-schemes-And-Wallpapers/Wallpapers/wlp19.png &
-redshift -P -O 5000 &
-mpd &
+redshift -P -O 4600 &
+#mpd &
 flameshot &
 clipmenud &
 xfce4-power-manager &
 #volctl &
 #nm-applet &
 /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
-dunst &
-syncthing -no-browser &
+#dunst &
+#syncthing -no-browser &
 
 # Update Dir list
 find /home/david/{Downloads,Pictures,Docs/{Github,Phone,Scripts,Server,Faculdade}} -type d | grep -v .git | grep -v CTeSP > /home/david/.config/dirs.txt
 
-# Dwm
-#dwmblocks &
-#while true; do
-#    dwm > /dev/null 2>&1
-#done
-#exec dwm
-
-# i3
-exec i3
+exec awesome
