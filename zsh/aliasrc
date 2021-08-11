@@ -3,6 +3,7 @@
 # Programms
 alias \
     nv='nvim' \
+    v='vim'\
     g='git'
 
 # Ls
@@ -30,7 +31,7 @@ alias \
 
 # System space and hardware
 alias \
-    df='df -h'\
+    df='dfc'\
     free='free -mth'\
     du='du -sh'\
     hw="hwinfo --short"
@@ -43,18 +44,22 @@ alias \
     cterm='nvim ~/.config/termite/config'\
     cstart='nvim ~/.config/bspwm/autostart.sh'\
     czsh='nvim ~/.config/zsh/.zshrc'\
+    calias='nvim ~/.config/zsh/aliasrc'\
     cnvim='nvim ~/.config/nvim/init.vim'\
     cala='nvim ~/.config/alacritty/alacritty.yml'\
     cki='nvim ~/.config/kitty/kitty.conf'\
     cro='nvim ~/.config/rofi/config.rasi'\
     cpi='nvim ~/.config/picom.conf'\
-    cvifm='~/.config/vifm/vifmrc'
+    cvifm='nvim ~/.config/vifm/vifmrc'\
+    ci3='nvim ~/.config/i3/config'\
+    clf='nvim ~/.config/lf/lfrc'
 
 # Dirs
 alias \
     dgit='cd ~/Docs/Github'\
     dfl='cd ~/Docs/Faculdade/Licenciatura/1_ano'\
-    ddwm='cd ~/Docs/Github/Suckless'
+    ddwm='cd ~/Docs/Github/Suckless'\
+    dnvim='cd ~/.config/nvim'
 
 # Services
 alias \
@@ -84,13 +89,9 @@ alias \
 
 # Update Arch Mirror List, System & database
 alias \
-    mirrors='sudo reflector -c Portugal -c Spain -c Germany -c UK -a 12 -p https --sort rate --save /etc/pacman.d/mirrorlist'\
-    update='pac -Syu && yay -Su && pkill -SIGRTMIN+3 i3blocks'
-#    update='pac -Syu && yay -Su && echo "#!/bin/sh
-#echo  0 " > ~/Docs/Scripts/dwmblocks/s-packages && pkill -RTMIN+4 dwmblocks'\
-    #check='check_updates '\
+    mirrors='sudo reflector -c Portugal -c Spain -c Germany -a 12 -p https --sort rate --save /etc/pacman.d/mirrorlist'\
+    update='pac -Syu && yay -Su && s-packages'\
     updatedb='sudo updatedb'
-
 
 # Network Manager
 alias \

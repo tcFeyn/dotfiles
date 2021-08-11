@@ -325,6 +325,9 @@ filextype */
         \ {View in Pcmanfm}
         \ pcmanfm %f &,
 
+filetype *.pkt
+    \ packettracer %f &
+
 " Syntax highlighting in preview
 
 " Explicitly set highlight type for some extensions
@@ -435,7 +438,7 @@ nnoremap ofn :!nvim %c<cr>
 nnoremap ofv :!veracrypt %c<cr>
 
 " Open a file with okular
-nnoremap ofp :!okular %c<cr>
+nnoremap ofok :!okular %c<cr>
 
 " Open console in current directory inside vifm
 nnoremap s :shell<cr>
@@ -448,13 +451,15 @@ nnoremap q :q<cr>
 
 " Paths
 nnoremap gh :cd ~/<cr>
-nnoremap ph :cd ~/Docs/Phone<cr>
+nnoremap cfg :cd ~/.config<cr>
+nnoremap doc :cd ~/Docs<cr>
+nnoremap gph :cd ~/Docs/Phone<cr>
 nnoremap gsrp :cd ~/Docs/Scripts<cr>
 nnoremap git :cd ~/Docs/Github<cr>
 nnoremap gsrv :cd ~/Docs/Server<cr>
 nnoremap bak :cd ~/Docs/Server/Backups<cr>
 nnoremap gfl :cd ~/Docs/Faculdade/Licenciatura/1_ano<cr>
-nnoremap gp :cd ~/Pictures<cr>
+nnoremap gpi :cd ~/Pictures<cr>
 nnoremap gm :cd ~/Music<cr>
 nnoremap gdw :cd ~/Downloads<cr>
 nnoremap grm :cd /media<cr>
