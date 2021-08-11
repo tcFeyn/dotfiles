@@ -47,10 +47,12 @@ xinput --set-prop "SOAI Gaming Mouse" "libinput Accel Speed" -1
 xrandr --output DisplayPort-1 --mode 1920x1080 --rate 144.00 --pos 0x0 --rotate normal
 xrandr --output DisplayPort-0 --primary --mode 1920x1080 --rate 144.00 --pos 1920x0 --rotate normal
 
+xrdb -merge ~/.Xresources &
+
 # Startup Apps
 picom --config $HOME/.config/picom.conf &
-feh --bg-fill ~/Pictures/PC/anime.png &
-redshift -P -O 4000 &
+feh --bg-fill ~/Docs/Github/Color-schemes-And-Wallpapers/Wallpapers/wlp1.png --bg-fill ~/Docs/Github/Color-schemes-And-Wallpapers/Wallpapers/wlp19.png &
+redshift -P -O 5000 &
 mpd &
 flameshot &
 clipmenud &
@@ -60,7 +62,9 @@ xfce4-power-manager &
 /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
 dunst &
 syncthing -no-browser &
-#~/Docs/Scripts/check_updates &
+
+# Update Dir list
+find /home/david/{Downloads,Pictures,Docs/{Github,Phone,Scripts,Server,Faculdade}} -type d | grep -v .git | grep -v CTeSP > /home/david/.config/dirs.txt
 
 # Dwm
 #dwmblocks &
