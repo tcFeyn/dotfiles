@@ -44,8 +44,8 @@ xset b off &
 xinput --set-prop "SteelSeries SteelSeries Rival 3" "libinput Accel Speed" -1
 
 # Screen Settings
-xrandr --output DisplayPort-1 --primary --mode 1920x1080 --rate 144.00 --pos 0x0 --rotate normal
-xrandr --output DisplayPort-0 --mode 1920x1080 --rate 144.00 --pos 1920x0 --rotate normal
+xrandr --output DisplayPort-1 --mode 1920x1080 --rate 144.00 --pos 0x0 --rotate normal
+xrandr --output DisplayPort-0 --primary --mode 1920x1080 --rate 144.00 --pos 1920x0 --rotate normal
 
 xrdb -merge ~/.Xresources &
 

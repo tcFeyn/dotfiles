@@ -52,7 +52,8 @@ alias \
     cpi='nvim ~/.config/picom.conf'\
     cvifm='nvim ~/.config/vifm/vifmrc'\
     ci3='nvim ~/.config/i3/config'\
-    clf='nvim ~/.config/lf/lfrc'
+    clf='nvim ~/.config/lf/lfrc'\
+    caw='nv ~/.config/awesome/rc.lua'
 
 # Dirs
 alias \

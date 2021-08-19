@@ -12,6 +12,8 @@ export ANDROID_SDK_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/android"
 export GTK3_RC_FILES="$XDG_CONFIG_HOME"/gtk-3.0/settings.ini
 #export QT_QPA_PLATFORMTHEME=gtk2
 export LANG=en_US.UTF-8
+export PF_INFO="ascii title os kernel wm editor shell uptime pkgs memory palette"
+XDG_SESSION_TYPE=x11
 
 # Default Apps
 export EDITOR="nvim"
