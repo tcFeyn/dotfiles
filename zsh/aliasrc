@@ -24,9 +24,9 @@ alias \
 alias \
     cd-='cd ..'\
     grep='grep --color=auto'\
-    cp='cp -v'\
-    mv='mv -v'\
-    rm='rm -v'\
+    cp='cp -iv'\
+    mv='mv -iv'\
+    rm='rm -Iv'\
     mkdir='mkdir -pv'
 
 # System space and hardware
@@ -58,9 +58,10 @@ alias \
 # Dirs
 alias \
     dgit='cd ~/Docs/Github'\
-    dfl='cd ~/Docs/Faculdade/Licenciatura/1_ano'\
-    ddwm='cd ~/Docs/Github/Suckless'\
-    dnvim='cd ~/.config/nvim'
+    dfl='cd ~/Docs/Faculdade/Licenciatura'\
+    dnvim='cd ~/.config/nvim'\
+    ds='cd ~/Docs/Github/Scripts'\
+    daw='cd ~/.config/awesome'
 
 # Services
 alias \
@@ -110,5 +111,4 @@ alias \
 
 # Scripts
 alias \
-    fm='lf-ueberzug'\
-    d='cd "$(awk "{print $1}" ~/.config/bmdirs | fzf | sed "s|~|$HOME|")"'
+    d='cd "$(awk "{print $1}" ~/.config/dirs.txt | fzf | sed "s|~|$HOME|")"'
