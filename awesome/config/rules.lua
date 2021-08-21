@@ -42,16 +42,18 @@ awful.rules.rules = {
           "PacketTracer",
           "Pcmanfm",
           "Lxappearance",
-          "Pavucontrol",
           "XTerm",
           "Xfce4-power-manager-settings",
+          "mpv",
+          "Steam",
+          "BleachBit",
+          "Timeshift-gtk"
         },
 
         -- Note that the name property shown in xprop might be set slightly after creation of the client
         -- and the name shown there might not match defined rules here.
         name = {
           "Event Tester",  -- xev.
-          "Friends List",
         },
         role = {
           "AlarmWindow",  -- Thunderbird's calendar.
@@ -64,14 +66,14 @@ awful.rules.rules = {
     { rule_any = {type = { "normal", "dialog" }
       }, properties = { titlebars_enabled = true }
     },
-   -- Set Firefox to always map on the tag named "2" on screen 1.
-   -- { rule = {
-   --     class = {
-   --         "firefox",
-   --         "Librewolf",
-   --         "Brave-browser"
-   --     }
-
-   -- },
-   --    properties = { screen = 1, tag = "2" } },
+    { rule_any = {class = { "Steam" }
+      }, properties = { titlebars_enabled = false }
+    },
+    --{ rule = {
+    --   class = {
+    --        "firefox",
+    --        "Librewolf",
+    --        "Brave-browser"
+    --   }
+    --}, properties = { screen = 1, tag = "2" } },
 }

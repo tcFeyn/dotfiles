@@ -10,9 +10,10 @@ alt = "Mod1"
 
 -- {{ Mouse bindings }}
 root.buttons(gears.table.join(
-    awful.button({ }, 4, awful.tag.viewnext),
-    awful.button({ }, 5, awful.tag.viewprev)
+    --awful.button({ }, 4, awful.tag.viewnext),
+    --awful.button({ }, 5, awful.tag.viewprev),
 ))
+
 
 -- {{ Sloppy focus }}
 client.connect_signal("mouse::enter", function(c)
@@ -33,8 +34,11 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Shift" }, "k", function () awful.client.swap.global_bydirection("up") end ),
     awful.key({ modkey, "Shift" }, "l", function () awful.client.swap.global_bydirection("right") end ),
 
-    awful.key({ modkey, "Control" }, "l",     function () awful.tag.incmwfact( 0.05) end),
-    awful.key({ modkey, "Control" }, "h",     function () awful.tag.incmwfact(-0.05) end),
+    awful.key({ modkey, "Control" }, "l", function () awful.tag.incmwfact( 0.05) end),
+    awful.key({ modkey, "Control" }, "h", function () awful.tag.incmwfact(-0.05) end),
+
+    awful.key({ modkey, "Control" }, "k", function () awful.client.incwfact( 0.05) end),
+    awful.key({ modkey, "Control" }, "j", function () awful.client.incwfact(-0.05) end),
 
     awful.key({ modkey }, "i", function () awful.tag.incnmaster( 1, nil, true) end),
     awful.key({ modkey, "Shift" }, "i", function () awful.tag.incnmaster(-1, nil, true) end),
@@ -61,12 +65,17 @@ globalkeys = gears.table.join(
    awful.key({}, "XF86AudioPrev", function()
      awful.util.spawn("playerctl previous", false) end),
 
-    -- Utils
+    -- Screenshots
+    awful.key({ }, "Print", function () awful.spawn.with_shell('flameshot full -p ~/Pictures && notify-send -u normal "Print Screen Taken"') end),
+    awful.key({ modkey }, "Print", function () awful.util.spawn('flameshot gui') end),
+
+    -- Awesome Controls
     awful.key({ modkey, "Control" }, "F1", awesome.restart),
     awful.key({ modkey, "Control" }, "F3", awesome.quit),
     awful.key({ modkey }, "]", function () awful.layout.inc( 1) end),
     awful.key({ modkey }, "[", function () awful.layout.inc(-1) end),
 
+    -- Dmenu and Rofi scripts
     awful.key({ modkey }, "d", function () awful.spawn('dmenu_run') end),
     awful.key({ modkey }, "z", function () awful.spawn('run-script') end),
     awful.key({ modkey }, "p", function () awful.spawn('search-conf') end),
@@ -76,6 +85,9 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Control" }, "space", function () awful.spawn('mount_drive') end),
     awful.key({ modkey, "Control", "Shift" }, "space", function () awful.spawn('unmount_drive') end),
     awful.key({ modkey }, "space", function () awful.spawn('layout') end),
+
+    -- Toogle Wibar
+    awful.key({ modkey }, "y", function () myscreen = awful.screen.focused() myscreen.mywibox.visible = not myscreen.mywibox.visible end ),
 
     -- Power Menu
     awful.key({ modkey, "Control" }, "F5", function () awful.spawn('shutdown now') end),
@@ -87,15 +99,16 @@ globalkeys = gears.table.join(
     awful.key({ modkey }, "Return", function () awful.spawn(terminal) end),
     awful.key({ modkey, alt }, "w", function () awful.spawn('librewolf') end),
     awful.key({ modkey, alt }, "f", function () awful.spawn('pcmanfm') end),
-    awful.key({ modkey, "Shift" }, "Return", function () awful.spawn('kitty $pwd') end),
     awful.key({ modkey, alt }, "s", function () awful.spawn('pavucontrol') end),
     awful.key({ modkey, alt }, "k", function () awful.spawn('keepassxc') end),
-    awful.key({ modkey, alt }, "p", function () awful.spawn('gpick') end)
+    awful.key({ modkey, alt }, "p", function () awful.spawn('gpick') end),
+    awful.key({ modkey, alt }, "m", function () awful.spawn('spotify') end)
 
 )
 
 clientkeys = gears.table.join(
 
+    awful.key({ modkey, "Control" }, "t", function (c) awful.titlebar.toggle(c) end),
     awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end),
     awful.key({ modkey }, "q", function (c) c:kill() end),
     awful.key({ modkey }, "f",  awful.client.floating.toggle),
@@ -106,7 +119,8 @@ clientkeys = gears.table.join(
     awful.key({ modkey }, "n", function (c) c.fullscreen = not c.fullscreen c:raise() end),
     awful.key({ modkey }, "m", function (c) c.maximized = not c.maximized c:raise() end),
     awful.key({ modkey, "Control" }, "m", function (c) c.maximized_vertical = not c.maximized_vertical c:raise() end),
-    awful.key({ modkey, "Shift" }, "m", function (c) c.maximized_horizontal = not c.maximized_horizontal c:raise() end)
+    awful.key({ modkey, "Shift" }, "m", function (c) c.maximized_horizontal = not c.maximized_horizontal c:raise() end),
+    awful.key({ modkey }, "t", function (c) c.ontop = not c.ontop end)
 
 )
 

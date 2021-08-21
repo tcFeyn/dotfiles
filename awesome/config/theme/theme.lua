@@ -2,6 +2,7 @@
 local gears = require("gears")
 local awful = require("awful")
 local wibox = require("wibox")
+local naughty = require("naughty")
 local theme_assets = require("beautiful.theme_assets")
 local xresources = require("beautiful.xresources")
 local dpi = xresources.apply_dpi
@@ -31,22 +32,9 @@ theme.border_normal = "#000000"
 theme.border_focus  = "#535d6c"
 theme.border_marked = "#91231c"
 
--- There are other variable sets
--- overriding the default one when
--- defined, the sets are:
--- taglist_[bg|fg]_[focus|urgent|occupied|empty|volatile]
--- tasklist_[bg|fg]_[focus|urgent]
--- titlebar_[bg|fg]_[normal|focus]
--- tooltip_[font|opacity|fg_color|bg_color|border_width|border_color]
--- mouse_finder_[color|timeout|animate_timeout|radius|factor]
--- prompt_[fg|bg|fg_cursor|bg_cursor|font]
--- hotkeys_[bg|fg|border_width|border_color|shape|opacity|modifiers_fg|label_bg|label_fg|group_margin|font|description_font]
--- Example:
---theme.taglist_bg_focus = "#ff0000"
+-- {{ Tags }}
 
-theme.taglist_spacing = dpi(5)
-
--- Generate taglist squares:
+-- Taglist squares:
 --local taglist_square_size = dpi(4)
 --theme.taglist_squares_sel = theme_assets.taglist_squares_sel(
 --    taglist_square_size, theme.fg_normal
@@ -54,6 +42,8 @@ theme.taglist_spacing = dpi(5)
 --theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
 --    taglist_square_size, theme.fg_normal
 --)
+
+theme.taglist_spacing = dpi(5)
 
 theme.taglist_bg_focus = theme.bg_normal
 theme.taglist_fg_focus = theme.fg_focus
@@ -64,38 +54,27 @@ theme.taglist_fg_empty = theme.fg_normal
 theme.taglist_bg_urgent = theme.bg_urgent
 theme.taglist_fg_urgent = theme.fg_urgent
 
--- Variables set for theming notifications:
--- notification_font
--- notification_[bg|fg]
--- notification_[width|height|margin]
--- notification_[border_color|border_width|shape|opacity]
 
+-- {{ Notifications }}
 
+theme.notification_font = "FantasqueSansMono Nerd Font 13"
+theme.notification_bg = bg_normal
+theme.notification_fg = fg_normal
+theme.notification_max_width = 300
+theme.notification_max_height = 100
+--theme.notification_margin = 20
+--theme.notification_border_color = "#81A1C1"
+--theme.notification_border_width = 5
+--theme.notification_width = 300
+--theme.notification_height = 60
 
---beautiful.notification_font = "FantasqueSansMono Nerd Font 11"
---beautiful.notification_bg = "#2e3440"
---beautiful.notification_fg = "#eceff4"
---beautiful.notification_margin = 20
-----naughty.config.defaults.margin = beautiful.notification_margin
-----naughty.config.defaults.padding = 20
-----naughty.config.defaults.position = "top_right"
---beautiful.notification_border_width = 5
---beautiful.notification_border_color = "#80D1FF"
---beautiful.notification_width = 300
---beautiful.notification_height = 60
---beautiful.notification_max_width = 300
+--naughty.config.defaults.margin = beautiful.notification_margin
+naughty.config.defaults.padding = 20
+naughty.config.defaults.position = "top_right"
 
--- Variables set for theming the menu:
--- menu_[bg|fg]_[normal|focus]
--- menu_[border_color|border_width]
 theme.menu_submenu_icon = themes_path.."config/theme/submenu.png"
 theme.menu_height = dpi(15)
 theme.menu_width  = dpi(100)
-
--- You can add as many variables as
--- you wish and access them by using
--- beautiful.variable in your rc.lua
---theme.bg_widget = "#cc0000"
 
 -- {{ Title Bars }}
 client.connect_signal("request::titlebars", function(c)
@@ -138,7 +117,7 @@ client.connect_signal("request::titlebars", function(c)
     }
 end)
 
-theme.titlebar_bg_focus   = "#81a1c1"
+theme.titlebar_bg_focus   = "#81A1C1"
 theme.titlebar_bg_normal  = "#2E3440"
 
 theme.titlebar_close_button_normal = themes_path .. "config/theme/titlebar/inactive.png"

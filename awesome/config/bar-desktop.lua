@@ -16,10 +16,7 @@ local cw = calendar_widget({
     placement = 'top_right',
     radius = 8,
 })
-mytextclock:connect_signal("button::press",
-    function(_, _, _, button)
-        if button == 1 then cw.toggle() end
-    end)
+mytextclock:connect_signal("button::press", function(_, _, _, button) if button == 1 then cw.toggle() end end)
 local volume_widget = require('widgets.volume-widget.volume')
 local net_speed_widget = require("widgets.net-speed-widget.net-speed")
 local logout_menu_widget = require("widgets.logout-menu-widget.logout-menu")
@@ -27,6 +24,7 @@ local keylayout = awful.widget.keyboardlayout()
 local system_usage = awful.widget.watch('s-system_usage', 5)
 local weather_widget = require("../widgets/weather-widget.weather")
 local spotify_widget = require("../widgets/spotify-widget.spotify")
+--local packages = wibox.widget.("s-packages")
 
 per = wibox.widget.textbox("%")
 separator = wibox.widget.textbox("  ")
@@ -148,14 +146,14 @@ local function setup_wibox_on_secondary_screen(s)
             layout = wibox.layout.fixed.horizontal,
             separator,
             spotify_widget({
-               font = 'FantasqueSansMono Nerd Font',
-               play_icon = '/usr/share/icons/Papirus-Light/24x24/categories/spotify.svg',
-               pause_icon = '/usr/share/icons/Papirus-Dark/24x24/panel/spotify-indicator.svg',
-               dim_when_paused = true,
-               dim_opacity = 0.5,
-               max_length = 50,
-               show_tooltip = true,
-               timeout = 5
+                font = 'FantasqueSansMono Nerd Font',
+                play_icon = '/usr/share/icons/Papirus-Light/24x24/categories/spotify.svg',
+                pause_icon = '/usr/share/icons/Papirus-Dark/24x24/panel/spotify-indicator.svg',
+                dim_when_paused = true,
+                dim_opacity = 0.5,
+                max_length = 50,
+                show_tooltip = true,
+                timeout = 5
             }),
             separator,
             weather_widget({
@@ -172,7 +170,6 @@ local function setup_wibox_on_secondary_screen(s)
             }),
             separator,
             mytextclock,
-            wibox.widget.systray(),
         },
     }
 end
