@@ -1,4 +1,5 @@
 awesome/config/api.lua
+awesome/lain
 zsh/.zcompdump
 vifm/vifminfo
 vifm/vifminfo.json*

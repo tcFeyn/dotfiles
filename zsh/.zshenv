@@ -1,5 +1,5 @@
 # Paths
-export PATH=/opt:/bin:~/.local/bin/:~/Docs/Scripts/:~/Docs/Scripts/Dmenu:~/Docs/Scripts/Lf:~/Docs/Scripts/Utils:~/Docs/Scripts/blocks:~/Docs/Scripts/Fzf:$PATH
+export PATH=/opt:/bin:~/.local/bin/:~/Docs/Scripts/:~/Docs/Scripts/Dmenu:~/Docs/Scripts/Lf:~/Docs/Scripts/Various:~/Docs/Scripts/blocks:~/Docs/Scripts/Fzf:$PATH
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
@@ -12,7 +12,12 @@ export ANDROID_SDK_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/android"
 export GTK3_RC_FILES="$XDG_CONFIG_HOME"/gtk-3.0/settings.ini
 #export QT_QPA_PLATFORMTHEME=gtk2
 export LANG=en_US.UTF-8
+
+# Pfetch
 export PF_INFO="ascii title os kernel wm shell uptime pkgs memory palette"
+export PF_COL1="4"
+export PF_COL2="6"
+export PF_COL3="3"
 
 XDG_SESSION_TYPE=x11
 

@@ -92,7 +92,7 @@ alias \
 # Update Arch Mirror List, System & database
 alias \
     mirrors='sudo reflector -c Portugal -c Spain -c Germany -a 12 -p https --sort rate --save /etc/pacman.d/mirrorlist'\
-    update='pac -Syu && yay -Su && s-packages'\
+    update='pac -Syu && yay -Su'\
     updatedb='sudo updatedb'
 
 # Network Manager

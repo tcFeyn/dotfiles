@@ -17,16 +17,16 @@ local cw = calendar_widget({
     radius = 8,
 })
 mytextclock:connect_signal("button::press", function(_, _, _, button) if button == 1 then cw.toggle() end end)
-local volume_widget = require('widgets.volume-widget.volume')
-local net_speed_widget = require("widgets.net-speed-widget.net-speed")
+--local volume_widget = require('widgets.volume-widget.volume')
+volume_widget, volume_widget_timer = awful.widget.watch('s-volume', 3600)
+local net_speed_widget = awful.widget.watch('s-network_traffic', 2)
 local logout_menu_widget = require("widgets.logout-menu-widget.logout-menu")
-local keylayout = awful.widget.keyboardlayout()
-local system_usage = awful.widget.watch('s-system_usage', 5)
+keylayout, keylayout_timer = awful.widget.watch('s-keylayout', 3600)
+local system_usage = awful.widget.watch('s-system_usage', 2)
 local weather_widget = require("../widgets/weather-widget.weather")
 local spotify_widget = require("../widgets/spotify-widget.spotify")
---local packages = wibox.widget.("s-packages")
+--packages, packages_timer = awful.widget.watch('s-packages', 86400)
 
-per = wibox.widget.textbox("%")
 separator = wibox.widget.textbox("  ")
 
 
@@ -74,8 +74,8 @@ local tasklist_buttons = gears.table.join(
 
 
 local function setup_any_screen(s)
-    awful.tag({ " ", " ", " ", " ", " "}, s, awful.layout.layouts[1])
-
+    awful.tag({ "1", "2", "3"}, s, awful.layout.layouts[1])
+    s.mypromptbox = awful.widget.prompt()
     -- Create an imagebox widget which will contain an icon indicating which layout we're using.
     -- We need one layoutbox per screen.
     s.mylayoutbox = awful.widget.layoutbox(s)
@@ -115,12 +115,11 @@ local function setup_wibox_on_primary_screen(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            net_speed_widget(),
+            net_speed_widget,
             separator,
             system_usage,
             separator,
-            volume_widget{ widget_type = 'icon_and_text' },
-            per,
+            volume_widget,
             separator,
             keylayout,
             separator,

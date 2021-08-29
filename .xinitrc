@@ -37,10 +37,10 @@ fi
 numlockx & # turns numlock on
 setxkbmap us & # keyboard language
 setxkbmap -option caps:swapescape & # swaps capslock with esc key
-xsetroot -cursor_name left_ptr & # set mouse cursor
 xset r on &
 xset r rate 300 50 &
 xset b off &
+xsetroot -cursor_name left_ptr & # set mouse cursor
 xinput --set-prop "SteelSeries SteelSeries Rival 3" "libinput Accel Speed" -1
 
 # Screen Settings
@@ -51,7 +51,7 @@ xrdb -merge ~/.Xresources &
 
 # Startup Apps
 picom --config $HOME/.config/picom.conf &
-feh --bg-fill ~/Docs/Github/Color-schemes-And-Wallpapers/Wallpapers/wlp1.png --bg-fill ~/Docs/Github/Color-schemes-And-Wallpapers/Wallpapers/wlp19.png &
+feh --bg-fill ~/Docs/Github/Color-schemes-And-Wallpapers/Wallpapers/Nord/nord4.png --bg-fill ~/Docs/Github/Color-schemes-And-Wallpapers/Wallpapers/Nord/nord1.png &
 redshift -P -O 4600 &
 #mpd &
 flameshot &

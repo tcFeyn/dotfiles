@@ -2,7 +2,7 @@ configuration {
 modi: "drun,run,window";
 width: 50;
 lines: 15;
-columns: 1;
+columns: 2;
 font: "FantasqueSansMono Nerd Font 13";
 location: 0;
 padding: 5;
@@ -21,7 +21,7 @@ terminal: "kitty";
 /*	run-shell-command: "{terminal} -e {cmd}";*/
 /*	window-command: "wmctrl -i -R {window}";*/
 /*	window-match-fields: "all";*/
-icon-theme: "Papirus-Dark" ;
+icon-theme: "Nordic" ;
 drun-match-fields: "name,generic,exec,categories";
 drun-show-actions: false;
 drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";

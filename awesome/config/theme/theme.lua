@@ -16,12 +16,12 @@ theme.font = "FantasqueSansMono Nerd Font 9.5"
 
 -- {{ Colors }}
 theme.fg_normal     = "#ECEFF4"
-theme.fg_focus      = "#81A1C1"
+theme.fg_focus      = "#ECEFF4"
 theme.fg_urgent     = "#D08770"
 theme.fg_minimize   = "#ffffff"
 
 theme.bg_normal     = "#2E3440"
-theme.bg_focus      = "#3B4252"
+theme.bg_focus      = "#363c4a"
 theme.bg_urgent     = "#BF616A"
 theme.bg_minimize   = "#444444"
 theme.bg_systray    = theme.bg_normal
@@ -29,7 +29,7 @@ theme.bg_systray    = theme.bg_normal
 theme.useless_gap   = dpi(0)
 theme.border_width  = dpi(0)
 theme.border_normal = "#000000"
-theme.border_focus  = "#535d6c"
+theme.border_focus  = "#363c4a"
 theme.border_marked = "#91231c"
 
 -- {{ Tags }}
@@ -46,7 +46,7 @@ theme.border_marked = "#91231c"
 theme.taglist_spacing = dpi(5)
 
 theme.taglist_bg_focus = theme.bg_normal
-theme.taglist_fg_focus = theme.fg_focus
+theme.taglist_fg_focus = "#81A1C1"
 theme.taglist_bg_occupied = theme.bg_normal
 theme.taglist_fg_occupied = theme.fg_urgent
 theme.taglist_bg_empty = theme.bg_normal
@@ -108,17 +108,17 @@ client.connect_signal("request::titlebars", function(c)
             layout  = wibox.layout.flex.horizontal
         },
         { -- Right
-            --awful.titlebar.widget.floatingbutton (c),
-            --awful.titlebar.widget.stickybutton   (c),
-            --awful.titlebar.widget.ontopbutton    (c),
+            --awful.titlebar.widget.floatingbutton(c),
+            --awful.titlebar.widget.stickybutton(c),
+            --awful.titlebar.widget.ontopbutton(c),
             layout = wibox.layout.fixed.horizontal()
         },
         layout = wibox.layout.align.horizontal,
     }
 end)
 
-theme.titlebar_bg_focus   = "#81A1C1"
-theme.titlebar_bg_normal  = "#2E3440"
+theme.titlebar_bg_focus   = "#363c4a"
+theme.titlebar_bg_normal  = "#363c4a"
 
 theme.titlebar_close_button_normal = themes_path .. "config/theme/titlebar/inactive.png"
 theme.titlebar_close_button_focus  = themes_path .. "config/theme/titlebar/close.png"
@@ -175,7 +175,7 @@ theme.awesome_icon = theme_assets.awesome_icon(
 theme.icon_theme = "Papirus"
 
 -- {{ Gaps }}
-theme.useless_gap = 4
+theme.useless_gap = 5
 theme.gap_single_client = true
 
 -- {{ Borders }}

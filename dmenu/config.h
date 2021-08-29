@@ -6,9 +6,9 @@ static const char *fonts[] = { "FantasqueSansMono Nerd Font:pixelsize=15", "Noto
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 static const char *colors[SchemeLast][2] = {
 	/*                 fg            bg       */
-	[SchemeNorm] =  { "#ffffff", "#282828" },
-	[SchemeSel]  =  { "#ffffff", "#81a1c1" },
-	[SchemeOut]  =  { "#ffffff", "#ffffff" },
+	[SchemeNorm] =  { "#ECEFF4", "#2E3440" },
+	[SchemeSel]  =  { "#ECEFF4", "#81a1c1" },
+	[SchemeOut]  =  { "#ECEFF4", "#ECEFF4" },
 };
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
 static unsigned int lines      = 0;
