@@ -24,7 +24,6 @@ theme.bg_normal     = "#2E3440"
 theme.bg_focus      = "#363c4a"
 theme.bg_urgent     = "#BF616A"
 theme.bg_minimize   = "#444444"
-theme.bg_systray    = theme.bg_normal
 
 theme.useless_gap   = dpi(0)
 theme.border_width  = dpi(0)
@@ -175,11 +174,36 @@ theme.awesome_icon = theme_assets.awesome_icon(
 theme.icon_theme = "Papirus"
 
 -- {{ Gaps }}
-theme.useless_gap = 5
+theme.useless_gap = 10
 theme.gap_single_client = true
 
 -- {{ Borders }}
 --client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 --client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+
+-- {{ Mstab }}
+theme.mstab_dont_resize_slaves = false      -- whether the tabbed stack windows should be smaller than the
+                                            -- currently focused stack window (set it to true if you use
+                                            -- transparent terminals. False if you use shadows on solid ones
+theme.mstab_bar_padding = "default"         -- how much padding there should be between clients and your tabbar
+                                            -- by default it will adjust based on your useless gaps.
+                                            -- If you want a custom value. Set it to the number of pixels (int)
+theme.mstab_border_radius = 0               -- border radius of the tabbar
+theme.mstab_bar_height = 20                 -- height of the tabbar
+theme.mstab_tabbar_position = "top"         -- position of the tabbar (mstab currently does not support left,right)
+theme.mstab_tabbar_style = "modern"        -- style of the tabbar ("default", "boxes" or "modern")
+                                            -- defaults to the tabbar_style so only change if you want a
+                                            -- different style for mstab and tabbed
+
+theme.tabbed_spawn_in_tab = true
+
+
+theme.dont_swallow_classname_list = { "firefox", "Gimp", "Brave", "Save File" }
+theme.dont_swallow_filter_activated = true
+
+
+-- System trays
+theme.bg_systray    = theme.bg_normal
+theme.systray_icon_spacing = 10
 
 return theme

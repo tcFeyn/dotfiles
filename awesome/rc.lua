@@ -3,6 +3,7 @@
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
 pcall(require, "luarocks.loader")
 lain = require("lain")
+bling = require("bling")
 
 -- Standard awesome library
 local gears = require("gears")
@@ -90,6 +91,9 @@ client.connect_signal("manage", function (c)
         awful.placement.no_offscreen(c)
     end
 end)
+
+-- {{ Window Swalling }}
+bling.module.window_swallowing.start()
 
 -- {{ Autostart apps }}
 awful.spawn.with_shell("~/.config/awesome/config/autorun.sh")

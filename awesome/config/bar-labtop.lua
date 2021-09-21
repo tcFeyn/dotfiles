@@ -15,16 +15,12 @@ local cw = calendar_widget({
     placement = 'top_right',
     radius = 8,
 })
-mytextclock:connect_signal("button::press",
-    function(_, _, _, button)
-        if button == 1 then cw.toggle() end
-    end)
-local volume_widget = require('widgets.volume-widget.volume')
-local net_speed_widget = require("widgets.net-speed-widget.net-speed")
+mytextclock:connect_signal("button::press", function(_, _, _, button) if button == 1 then cw.toggle() end end)
+volume_widget, volume_widget_timer = awful.widget.watch('s-volume', 3600)
+local net_speed_widget = awful.widget.watch('s-network_traffic', 2)
+keylayout, keylayout_timer = awful.widget.watch('s-keylayout', 3600)
 local logout_menu_widget = require("widgets.logout-menu-widget.logout-menu")
-local keylayout = awful.widget.keyboardlayout()
 
-per = wibox.widget.textbox("%")
 separator = wibox.widget.textbox("  ")
 
 
@@ -73,8 +69,11 @@ local tasklist_buttons = gears.table.join(
 
 
 awful.screen.connect_for_each_screen(function(s)
-    awful.tag({ " ", " ", " ", " ", " "}, s, awful.layout.layouts[1])
+    awful.tag({ "1", "2", "3", "4"}, s, awful.layout.layouts[1])
 
+    -- System trays
+    s.systray = wibox.widget.systray()
+    s.systray.visible = true
     -- Create an imagebox widget which will contain an icon indicating which layout we're using.
     -- We need one layoutbox per screen.
     s.mylayoutbox = awful.widget.layoutbox(s)
@@ -112,15 +111,17 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            net_speed_widget(),
+            net_speed_widget,
             separator,
+
             separator,
-            volume_widget{ widget_type = 'icon_and_text' },
-            per,
+            volume_widget,
             separator,
             keylayout,
             separator,
             mytextclock,
+            separator,
+            s.systray,
             separator,
             logout_menu_widget(),
         },

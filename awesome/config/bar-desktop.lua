@@ -100,10 +100,17 @@ local function setup_any_screen(s)
 
     -- Create the wibox
     s.mywibox = awful.wibar({ position = "top", screen = s })
+
+    -- System trays
+    s.systray = wibox.widget.systray()
+    s.systray.visible = true
+    --s.systray.forced_height = 5
+    --s.systray.opacity = 0.1
 end
 
 local function setup_wibox_on_primary_screen(s)
     -- Add widgets to the wibox
+
     s.mywibox:setup {
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
@@ -124,6 +131,8 @@ local function setup_wibox_on_primary_screen(s)
             keylayout,
             separator,
             mytextclock,
+            separator,
+            s.systray,
             separator,
             logout_menu_widget(),
         },
@@ -156,8 +165,8 @@ local function setup_wibox_on_secondary_screen(s)
             }),
             separator,
             weather_widget({
-                api_key= api,
-                coordinates = {41.1496100, -8.6109900},
+                api_key = api.num,
+                coordinates = {api.lat , api.lon},
                 time_format_12h = true,
                 units = 'metric',
                 both_units_widget = false,

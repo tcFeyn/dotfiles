@@ -122,7 +122,13 @@ clientkeys = gears.table.join(
     awful.key({ modkey }, "m", function(c) c.maximized = not c.maximized c:raise() end),
     awful.key({ modkey, "Control" }, "m", function(c) c.maximized_vertical = not c.maximized_vertical c:raise() end),
     awful.key({ modkey, "Shift" }, "m", function(c) c.maximized_horizontal = not c.maximized_horizontal c:raise() end),
-    awful.key({ modkey }, "t", function(c) c.ontop = not c.ontop end)
+    awful.key({ modkey }, "t", function(c) c.ontop = not c.ontop end),
+
+    awful.key({ modkey, "Control" }, "p", function(c) bling.module.tabbed.pick(c) end),
+    awful.key({ modkey, "Control" }, "r", function(c) bling.module.tabbed.pop(c) end),
+    awful.key({ modkey, "Control" }, "", function(c) bling.module.tabbed.iter(c) end),
+    awful.key({ modkey, "Control" }, "k", function() bling.module.tabbed.pick_by_direction("right") end),
+    awful.key({ modkey, "Control" }, "j", function() bling.module.tabbed.pick_by_direction("left") end)
 
 )
 

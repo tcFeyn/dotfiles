@@ -66,7 +66,7 @@ awful.rules.rules = {
     { rule_any = {type = { "normal", "dialog" }
       }, properties = { titlebars_enabled = true }
     },
-    { rule_any = {class = { "Steam" }
+    { rule_any = { class = { "Steam", "Microsoft Teams - Preview" }
       }, properties = { titlebars_enabled = false }
     },
     --{ rule = {

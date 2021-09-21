@@ -58,6 +58,7 @@ alias \
 # Dirs
 alias \
     dgit='cd ~/Docs/Github'\
+    dots='cd ~/Docs/Github/dotfiles'\
     dfl='cd ~/Docs/Faculdade/Licenciatura'\
     dnvim='cd ~/.config/nvim'\
     ds='cd ~/Docs/Github/Scripts'\
@@ -87,7 +88,7 @@ alias \
     yR='yay -Rns'\
     ySs='yay -Ss'\
     ySc='yay -Sc'\
-    yYc='yay -Yc'\
+    yYc='yay -Yc'
 
 # Update Arch Mirror List, System & database
 alias \

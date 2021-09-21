@@ -2,7 +2,7 @@ configuration {
 modi: "drun,run,window";
 width: 50;
 lines: 15;
-columns: 2;
+columns: 1;
 font: "FantasqueSansMono Nerd Font 13";
 location: 0;
 padding: 5;
@@ -31,7 +31,7 @@ case-sensitive: false;
 cycle: true;
 sidebar-mode: false;
 auto-select: false;
-hide-scrollbar: true;
+hide-scrollbar: false;
 fullscreen: false;
 fake-transparency: true;
 click-to-exit: true;
