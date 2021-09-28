@@ -93,7 +93,7 @@ client.connect_signal("manage", function (c)
 end)
 
 -- {{ Window Swalling }}
-bling.module.window_swallowing.start()
+--bling.module.window_swallowing.start()
 
 -- {{ Autostart apps }}
 awful.spawn.with_shell("~/.config/awesome/config/autorun.sh")

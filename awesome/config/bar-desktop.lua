@@ -153,16 +153,16 @@ local function setup_wibox_on_secondary_screen(s)
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             separator,
-            spotify_widget({
-                font = 'FantasqueSansMono Nerd Font',
-                play_icon = '/usr/share/icons/Papirus-Light/24x24/categories/spotify.svg',
-                pause_icon = '/usr/share/icons/Papirus-Dark/24x24/panel/spotify-indicator.svg',
-                dim_when_paused = true,
-                dim_opacity = 0.5,
-                max_length = 50,
-                show_tooltip = true,
-                timeout = 5
-            }),
+            --spotify_widget({
+            --    font = 'FantasqueSansMono Nerd Font',
+            --    play_icon = '/usr/share/icons/Papirus-Light/24x24/categories/spotify.svg',
+            --    pause_icon = '/usr/share/icons/Papirus-Dark/24x24/panel/spotify-indicator.svg',
+            --    dim_when_paused = true,
+            --    dim_opacity = 0.5,
+            --    max_length = 50,
+            --    show_tooltip = true,
+            --    timeout = 5
+            --}),
             separator,
             weather_widget({
                 api_key = api.num,

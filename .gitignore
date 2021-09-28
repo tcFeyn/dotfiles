@@ -2,8 +2,6 @@ awesome/config/api.lua
 awesome/lain
 awesome/bling
 zsh/.zcompdump
-vifm/vifminfo
-vifm/vifminfo.json*
 ncmpcpp/error.log
 mpd/playlists
 dwm/dwm
@@ -20,3 +18,4 @@ dmenu/stest
 dmenu/stest.o
 dmenu/dmenu.o
 dmenu/drw.o
+nvim/plugin

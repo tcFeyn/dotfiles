@@ -61,9 +61,10 @@ xfce4-power-manager &
 #nm-applet &
 /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
 #dunst &
-#syncthing -no-browser &
+syncthing -no-browser &
 
 # Update Dir list
 find /home/david/{Downloads,Pictures,Docs/{Github,Phone,Scripts,Server,Faculdade}} -type d | grep -v .git | grep -v CTeSP > /home/david/.config/dirs.txt
 
+# Exec WM
 exec awesome

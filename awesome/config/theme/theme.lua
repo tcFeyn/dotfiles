@@ -198,7 +198,7 @@ theme.mstab_tabbar_style = "modern"        -- style of the tabbar ("default", "b
 theme.tabbed_spawn_in_tab = true
 
 
-theme.dont_swallow_classname_list = { "firefox", "Gimp", "Brave", "Save File" }
+theme.dont_swallow_classname_list = { "firefox","GNU Image Manipulation Program", "Brave", "Save File" }
 theme.dont_swallow_filter_activated = true
 
 

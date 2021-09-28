@@ -8,14 +8,14 @@ set ignorecase true
 set info size:time
 
 # Custom Functions
-cmd open ${{
-    case $(file --mime-type "$f" -bL) in
-        text/*|application/json) $EDITOR "$f";;
-        *) xdg-open "$f"
-    esac
-}}
+#cmd open ${{
+#    case $(file --mime-type "$f" -bL) in
+#        text/*|application/json) $EDITOR "$f";;
+#        *) xdg-open "$f"
+#    esac
+#}}
 
-cmd open-disown ${{
+cmd open ${{
     case $(file --mime-type "$f" -bL) in
         text/*|application/json) $EDITOR "$f";;
         *) xdg-open "$f" & disown %xdg-open;; # Detach process from lf
@@ -132,7 +132,7 @@ map f $nvim $(fzf)
 #map gs ${{clear; git status; echo "press ENTER"; read ENTER}}
 #map gl ${{clear; git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit}}
 
-map od open-disown
+#map od open-disown
 
 # File Openers
 map ee $$EDITOR "$f"
@@ -175,7 +175,7 @@ map gsrp cd ~/Docs/Scripts
 map git  cd ~/Docs/Github
 map gsrv cd ~/Docs/Server
 map bak  cd ~/Docs/Server/Backups
-map gfl  cd ~/Docs/Faculdade/Licenciatura/1_ano
+map gfl  cd ~/Docs/Faculdade/Licenciatura/2_ano
 map gpi  cd ~/Pictures
 map gm   cd ~/Music
 map gdw  cd ~/Downloads

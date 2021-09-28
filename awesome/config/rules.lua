@@ -47,7 +47,9 @@ awful.rules.rules = {
           "mpv",
           "Steam",
           "BleachBit",
-          "Timeshift-gtk"
+          "Timeshift-gtk",
+          "Gimp-2.10",
+          "Gnome-calculator",
         },
 
         -- Note that the name property shown in xprop might be set slightly after creation of the client

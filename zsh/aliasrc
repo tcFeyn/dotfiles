@@ -2,7 +2,8 @@
 
 # Programms
 alias \
-    nv='nvim' \
+    nv='nvim'\
+    lv='lvim'\
     v='vim'\
     g='git'
 
