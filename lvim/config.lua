@@ -115,6 +115,7 @@ lvim.plugins = {
     { "arcticicestudio/nord-vim" },
     { "folke/trouble.nvim", cmd = "TroubleToggle" },
     { "lervag/vimtex" },
+    { "norcalli/nvim-colorizer.lua" },
 }
 
 -- Autocommands
@@ -123,3 +124,6 @@ lvim.autocommands.custom_groups = {
     { "InsertEnter", "*", "norm zz" }, -- center screen on insert mode
     { "BufWinEnter", "*.tex", "VimtexCompile" },
 }
+
+
+require'colorizer'.setup()

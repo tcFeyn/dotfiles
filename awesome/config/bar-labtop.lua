@@ -17,6 +17,8 @@ local cw = calendar_widget({
 })
 mytextclock:connect_signal("button::press", function(_, _, _, button) if button == 1 then cw.toggle() end end)
 volume_widget, volume_widget_timer = awful.widget.watch('s-volume', 3600)
+local temp_cores = awful.widget.watch('s-tempcores', 5)
+local bat = awful.widget.watch('s-battery', 60)
 local net_speed_widget = awful.widget.watch('s-network_traffic', 2)
 keylayout, keylayout_timer = awful.widget.watch('s-keylayout', 3600)
 local logout_menu_widget = require("widgets.logout-menu-widget.logout-menu")
@@ -113,7 +115,9 @@ awful.screen.connect_for_each_screen(function(s)
             layout = wibox.layout.fixed.horizontal,
             net_speed_widget,
             separator,
-
+            temp_cores,
+            separator,
+            bat,
             separator,
             volume_widget,
             separator,

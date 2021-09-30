@@ -19,7 +19,7 @@ set nocompatible
 set splitbelow
 set splitright
 set iskeyword+=- " Treats dash separated words as one
-set noshowmode " Stops showing current vim mode
+"set noshowmode " Stops showing current vim mode
 set signcolumn=yes
 set updatetime=300
 set shortmess+=c
