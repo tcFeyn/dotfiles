@@ -50,6 +50,7 @@ awful.rules.rules = {
           "Timeshift-gtk",
           "Gimp-2.10",
           "Gnome-calculator",
+          "libreoffice",
         },
 
         -- Note that the name property shown in xprop might be set slightly after creation of the client

@@ -32,15 +32,13 @@ vim.cmd "autocmd BufWritePost plugins.lua PackerCompile" -- Auto compile when th
 
 return require("packer").startup(
     function(use)
-        use "wbthomason/packer.nvim"
-        use {"kyazdani42/nvim-tree.lua", opt = true}
-        use {"tpope/vim-fugitive", opt = true}
-        use {"nvim-lua/plenary.nvim", opt = true}
+        use { "wbthomason/packer.nvim" }
+        use { "tpope/vim-fugitive", opt = true }
+        use { "nvim-lua/plenary.nvim", opt = true }
         use { "arcticicestudio/nord-vim" }
-        use {"kyazdani42/nvim-web-devicons", opt = true}
-        use {"lewis6991/gitsigns.nvim", opt = true}
+        use { "kyazdani42/nvim-web-devicons", opt = true }
+        use { "lewis6991/gitsigns.nvim", opt = true }
 
-        require_plugin("nvim-tree.lua")
         require_plugin("nvim-web-devicons")
         require_plugin("vim-fugitive")
         require_plugin("gitsigns.nvim")

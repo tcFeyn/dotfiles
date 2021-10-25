@@ -97,6 +97,10 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Control" }, "F7", function() awful.spawn('systemctl suspend') end),
     awful.key({ modkey, "Control" }, "F8", function() awful.spawn('systemctl hibernate') end),
 
+    -- Switch sound output
+    awful.key({ modkey }, "F9", function() awful.spawn('pactl set-card-profile "alsa_card.pci-0000_2b_00.1" "off"') end),
+    awful.key({ modkey }, "F10", function() awful.spawn('pactl set-card-profile "alsa_card.pci-0000_2b_00.1" "output:hdmi-stereo-extra4"') end),
+
     -- Programs
     awful.key({ modkey }, "Return", function() awful.spawn(terminal) end),
     awful.key({ modkey, alt }, "w", function() awful.spawn('librewolf') end),

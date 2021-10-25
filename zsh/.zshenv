@@ -3,7 +3,7 @@ export PATH=/opt:/bin:~/.local/bin/:~/Docs/Scripts/:~/Docs/Scripts/Dmenu:~/Docs/
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
-export JAVA_HOME=/usr/lib/jvm/java-14-openjdk
+export JAVA_HOME=/usr/lib/jvm/java-16-openjdk
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
@@ -22,7 +22,7 @@ export PF_COL3="3"
 XDG_SESSION_TYPE=x11
 
 # Default Apps
-export EDITOR="nvim"
+export EDITOR="lvim"
 export VISUAL="nvim"
 export READER="mupdf"
 export PAGER="less"

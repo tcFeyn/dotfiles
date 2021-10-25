@@ -1,20 +1,22 @@
+---@diagnostic disable: unused-local
 local o = vim.o -- global options
 local wo = vim.wo -- window-local options
 local bo = vim.bo -- buffer-local options
 
 -- General
 lvim.log.level = "warn"
-lvim.format_on_save = true
+lvim.format_on_save = false
 lvim.colorscheme = "nord"
 
 -- Global
-o.tabstop = 4
-o.shiftwidth = 4
+o.tabstop = 2
+o.shiftwidth = 2
 
 -- Keymappings
 lvim.leader = "space"
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<F5>"] = ":TermExec cmd='gcc % -o %< && ./%<'<CR>" -- run and compile C code
+lvim.keys.normal_mode["<F6>"] = ":TermExec cmd='g++ % -o %< && ./%<'<CR>" -- run and compile C code
 
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 lvim.builtin.telescope.on_config_done = function()
@@ -63,11 +65,24 @@ lvim.builtin.which_key.mappings["r"] = {":%s//g<left><left>", "Replace Text"}
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.dashboard.active = true
 lvim.builtin.terminal.active = true
-lvim.builtin.nvimtree.side = "left"
+lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.show_icons.git = 0
 
 -- if you don't want all the parsers change this to a table of the ones you want
-lvim.builtin.treesitter.ensure_installed = "maintained"
+lvim.builtin.treesitter.ensure_installed = {
+  "bash",
+  "c",
+  "javascript",
+  "json",
+  "lua",
+  "python",
+  "typescript",
+  "css",
+  "rust",
+  "java",
+  "yaml",
+}
+
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 

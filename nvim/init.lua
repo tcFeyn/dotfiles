@@ -12,5 +12,4 @@ vim.cmd('hi Normal guibg=NONE ctermbg=NONE') -- enable transparency
 
 -- Source Plugins
 require('plugins')
-require('configs.nvimtree')
 require('configs.gitsigns')

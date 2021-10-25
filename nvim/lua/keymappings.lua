@@ -36,9 +36,6 @@ vim.api.nvim_set_keymap('n', '<Leader>r', ':%s//<left>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-j>f', ':bnext<CR>', opt)
 vim.api.nvim_set_keymap('n', '<C-k>f', ':bprevious<CR>', opt)
 
--- Open nvimtree
-vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', opt)
-
 -- Rezise
 vim.api.nvim_set_keymap('n', '<C-Up>', ':resize -5<CR>', opt)
 vim.api.nvim_set_keymap('n', '<C-Down>', ':resize +5<CR>', opt)
@@ -54,9 +51,9 @@ vim.api.nvim_set_keymap('n', '<Leader>vs', ':vsplit<CR>', opt)
 vim.api.nvim_set_keymap('v', 'J', ':m \'>+1<CR>gv=gv', opt)
 vim.api.nvim_set_keymap('v', 'K', ':m \'<-2<CR>gv=gv', opt)
 
--- TABS
---nnoremap <silent> <TAB> :tabnew<CR>
---nnoremap <silent> <A-l> :tabn<CR>
---nnoremap <silent> <A-h> :tabp<CR>
---nnoremap <silent> <A-k> :tabmove + <CR>
---nnoremap <silent> <A-j> :tabmove - <CR>
+-- Tabs
+vim.api.nvim_set_keymap('n', '<TAB>', ':tabnew<CR>', opt)
+vim.api.nvim_set_keymap('n', '<A-l>', ':tabn<CR>', opt)
+vim.api.nvim_set_keymap('n', '<A-h>', ':tabp<CR>', opt)
+vim.api.nvim_set_keymap('n', '<A-k>', ':tabmove + <CR>', opt)
+vim.api.nvim_set_keymap('n', '<A-j>', ':tabmove - <CR>', opt)

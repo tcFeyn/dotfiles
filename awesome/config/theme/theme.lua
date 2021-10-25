@@ -26,10 +26,10 @@ theme.bg_urgent     = "#BF616A"
 theme.bg_minimize   = "#444444"
 
 theme.useless_gap   = dpi(0)
-theme.border_width  = dpi(0)
-theme.border_normal = "#000000"
+theme.bordertop_width  = dpi(0)
+theme.border_normal = "#363c4a"
 theme.border_focus  = "#363c4a"
-theme.border_marked = "#91231c"
+theme.border_marked = "#363c4a"
 
 -- {{ Tags }}
 
@@ -75,6 +75,8 @@ theme.menu_submenu_icon = themes_path.."config/theme/submenu.png"
 theme.menu_height = dpi(15)
 theme.menu_width  = dpi(100)
 
+
+
 -- {{ Title Bars }}
 client.connect_signal("request::titlebars", function(c)
     -- buttons for the titlebar
@@ -89,14 +91,13 @@ client.connect_signal("request::titlebars", function(c)
         end)
     )
 
-    awful.titlebar(c) : setup {
+    awful.titlebar(c, { position = 'top', size = '16' }) : setup {
         { -- Left
             awful.titlebar.widget.closebutton(c),
             awful.titlebar.widget.maximizedbutton(c),
             awful.titlebar.widget.minimizebutton(c),
-            --awful.titlebar.widget.iconwidget(c),
-            --buttons = buttons,
-            layout  = wibox.layout.fixed.horizontal
+            layout  = wibox.layout.fixed.horizontal,
+            spacing = 5,
         },
         { -- Middle
             --{ -- Title
@@ -110,7 +111,7 @@ client.connect_signal("request::titlebars", function(c)
             --awful.titlebar.widget.floatingbutton(c),
             --awful.titlebar.widget.stickybutton(c),
             --awful.titlebar.widget.ontopbutton(c),
-            layout = wibox.layout.fixed.horizontal()
+            layout = wibox.layout.fixed.horizontal
         },
         layout = wibox.layout.align.horizontal,
     }
@@ -121,29 +122,18 @@ theme.titlebar_bg_normal  = "#363c4a"
 
 theme.titlebar_close_button_normal = themes_path .. "config/theme/titlebar/inactive.png"
 theme.titlebar_close_button_focus  = themes_path .. "config/theme/titlebar/close.png"
+theme.titlebar_close_button_focus_hover  = themes_path .. "config/theme/titlebar/close_hover.png"
 
 theme.titlebar_minimize_button_normal = themes_path .. "config/theme/titlebar/inactive.png"
 theme.titlebar_minimize_button_focus  = themes_path .. "config/theme/titlebar/minimize.png"
-
-theme.titlebar_ontop_button_normal_inactive = themes_path .. "config/theme/titlebar/inactive.png"
-theme.titlebar_ontop_button_focus_inactive  = themes_path .. "config/theme/titlebar/ontop.png"
-theme.titlebar_ontop_button_normal_active = themes_path .. "config/theme/titlebar/inactive.png"
-theme.titlebar_ontop_button_focus_active  = themes_path .. "config/theme/titlebar/ontop.png"
-
-theme.titlebar_sticky_button_normal_inactive = themes_path .. "config/theme/titlebar/inactive.png"
-theme.titlebar_sticky_button_focus_inactive  = themes_path .. "config/theme/titlebar/sticky.png"
-theme.titlebar_sticky_button_normal_active = themes_path .. "config/theme/titlebar/inactive.png"
-theme.titlebar_sticky_button_focus_active  = themes_path .. "config/theme/titlebar/sticky.png"
-
-theme.titlebar_floating_button_normal_inactive = themes_path .. "config/theme/titlebar/inactive.png"
-theme.titlebar_floating_button_focus_inactive  = themes_path .. "config/theme/titlebar/floating.png"
-theme.titlebar_floating_button_normal_active = themes_path .. "config/theme/titlebar/inactive.png"
-theme.titlebar_floating_button_focus_active  = themes_path .. "config/theme/titlebar/floating.png"
+theme.titlebar_minimize_button_focus_hover  = themes_path .. "config/theme/titlebar/minimize_hover.png"
 
 theme.titlebar_maximized_button_normal_inactive = themes_path .. "config/theme/titlebar/inactive.png"
-theme.titlebar_maximized_button_focus_inactive  = themes_path .. "config/theme/titlebar/maximize.png"
 theme.titlebar_maximized_button_normal_active = themes_path .. "config/theme/titlebar/inactive.png"
+theme.titlebar_maximized_button_focus_inactive  = themes_path .. "config/theme/titlebar/maximize.png"
 theme.titlebar_maximized_button_focus_active  = themes_path .. "config/theme/titlebar/maximize.png"
+theme.titlebar_maximized_button_focus_active_hover  = themes_path .. "config/theme/titlebar/maximize_hover.png"
+theme.titlebar_maximized_button_focus_inactive_hover  = themes_path .. "config/theme/titlebar/maximize_hover.png"
 
 --theme.wallpaper = themes_path.."default/background.png"
 
