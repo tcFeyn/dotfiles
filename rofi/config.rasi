@@ -36,7 +36,6 @@ fullscreen: false;
 fake-transparency: true;
 click-to-exit: true;
 show-match: true;
-theme: "~/.config/rofi/themes/nord.rasi";
 /*	parse-hosts: false;*/
 /*	parse-known-hosts: true;*/
 combi-modi: "window,run";
@@ -142,3 +141,5 @@ combi-modi: "window,run";
 /*	me-accept-entry: "MouseDPrimary";*/
 /*	me-accept-custom: "Control+MouseDPrimary";*/
 }
+
+@theme "~/.config/rofi/themes/nord.rasi"

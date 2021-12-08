@@ -109,7 +109,8 @@ globalkeys = gears.table.join(
     awful.key({ modkey, alt }, "k", function() awful.spawn('keepassxc') end),
     awful.key({ modkey, alt }, "p", function() awful.spawn('gpick') end),
     awful.key({ modkey, alt }, "m", function() awful.spawn('spotify') end),
-    awful.key({ modkey, alt }, "t", function() awful.spawn('telegram-desktop') end)
+    awful.key({ modkey, alt }, "t", function() awful.spawn('telegram-desktop') end),
+    awful.key({ modkey, alt }, "d", function() awful.spawn('discord') end)
 
 )
 

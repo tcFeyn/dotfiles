@@ -12,7 +12,7 @@ local themes_path = gfs.get_configuration_dir()
 local theme = {}
 
 -- {{ Font }}
-theme.font = "FantasqueSansMono Nerd Font 9.5"
+theme.font = "FantasqueSansMono Nerd Font 10"
 
 -- {{ Colors }}
 theme.fg_normal     = "#ECEFF4"

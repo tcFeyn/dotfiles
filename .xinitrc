@@ -63,8 +63,14 @@ xfce4-power-manager &
 #dunst &
 syncthing -no-browser &
 
+# Create Virtual Cable for OBS
+pactl load-module module-null-sink sink_name=Source
+pactl load-module module-virtual-source source_name=VirtualMic master=Source.monitor
+
 # Update Dir list
 find /home/david/{Downloads,Pictures,Docs/{Github,Phone,Scripts,Server,Faculdade}} -type d | grep -v .git | grep -v CTeSP > /home/david/.config/dirs.txt
+
+~/Docs/Scripts/Various/restart_spotify &
 
 # Exec WM
 exec awesome
