@@ -1,15 +1,21 @@
--- Source Settings and Functions
-vim.cmd('source ~/.config/nvim/vimscript/settings.vim')
-vim.cmd('source ~/.config/nvim/vimscript/functions.vim')
-
--- Source keymappings
-require('keymappings')
-
--- Set Colorscheme
-vim.cmd('colorscheme nord')
---vim.cmd('set background=dark')
-vim.cmd('hi Normal guibg=NONE ctermbg=NONE') -- enable transparency
-
--- Source Plugins
-require('plugins')
-require('configs.gitsigns')
+require "user.options"
+require "user.keymaps"
+require "user.plugins"
+require "user.colorscheme"
+require "user.cmp"
+require "user.lsp"
+require "user.telescope"
+require "user.treesitter"
+require "user.autopairs"
+require "user.comment"
+require "user.gitsigns"
+require "user.nvim-tree"
+require "user.bufferline"
+require "user.lualine"
+require "user.toggleterm"
+require "user.project"
+require "user.impatient"
+require "user.indentline"
+require "user.alpha"
+require "user.whichkey"
+require "user.autocommands"

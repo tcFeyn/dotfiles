@@ -22,7 +22,7 @@ export PF_COL3="3"
 XDG_SESSION_TYPE=x11
 
 # Default Apps
-export EDITOR="lvim"
+export EDITOR="nvim"
 export VISUAL="nvim"
 export READER="mupdf"
 export PAGER="less"
