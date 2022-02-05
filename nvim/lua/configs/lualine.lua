@@ -14,12 +14,12 @@ local diagnostics = {
 	symbols = { error = " ", warn = " " },
 	colored = false,
 	update_in_insert = false,
-	always_visible = true,
+	always_visible = false,
 }
 
 local diff = {
 	"diff",
-	colored = false,
+	colored = true,
 	symbols = { added = " ", modified = " ", removed = " " }, -- changes diff symbols
   cond = hide_in_width
 }

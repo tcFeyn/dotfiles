@@ -40,11 +40,3 @@ vim.opt.shortmess:append "c"
 for k, v in pairs(options) do
   vim.opt[k] = v
 end
-
-cmd = vim.cmd
-
-cmd [[set whichwrap+=<,>,[,],h,l]]
-cmd [[set iskeyword+=-]]
-cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
-cmd [[autocmd InsertEnter * norm zz]]
-cmd [[autocmd BufWritePre * %s/\s\+$//e]]
