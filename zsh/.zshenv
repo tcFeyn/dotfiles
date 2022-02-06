@@ -1,5 +1,5 @@
 # Paths
-export PATH=/opt:/bin:~/.local/bin/:~/Docs/Scripts/:~/Docs/Scripts/Dmenu:~/Docs/Scripts/Lf:~/Docs/Scripts/Various:~/Docs/Scripts/blocks:~/Docs/Scripts/Fzf:$PATH
+export PATH=/opt:/bin:~/.local/bin/:~/Docs/Scripts/:~/Docs/Scripts/Dmenu:~/Docs/Scripts/Lf:~/Docs/Scripts/Various:~/Docs/Scripts/blocks:~/Docs/Scripts/Fzf:~/.cargo/bin:$PATH
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
