@@ -26,7 +26,9 @@
     highlight:     underline bold #eceff4;
 
     transparent: rgba(46,52,64,0);
-    columns: 2;
+    columns: 1;
+    lines: 10;
+    width: 550;
 }
 
 window {
