@@ -32,7 +32,7 @@ export VIDEO="mpv"
 export IMAGE="sxiv"
 export COLORTERM="truecolor"
 export OPENER="xdg-opener"
-export WM="awesome"
+#export WM="awesome"
 
 # Clipmenu
 export CM_SELECTIONS="clipboard"
@@ -43,9 +43,9 @@ export CM_HISTLENGTH=5
 export CM_LAUNCHER="dmenu"
 export CM_IGNORE_WINDOW="(KeePassXC)"
 
-if [[ "$(tty)" = "/dev/tty1" ]]; then
-    pgrep awesome || startx
-fi
+#if [[ "$(tty)" = "/dev/tty1" ]]; then
+#    pgrep awesome || startx
+#fi
 
 export LF_ICONS="\
 di=:\
