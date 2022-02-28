@@ -9,12 +9,12 @@ export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
 export ANDROID_SDK_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/android"
 #export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
-export GTK3_RC_FILES="$XDG_CONFIG_HOME"/gtk-3.0/settings.ini
+#export GTK3_RC_FILES="$XDG_CONFIG_HOME"/gtk-3.0/settings.ini
 #export QT_QPA_PLATFORMTHEME=gtk2
 export LANG=en_US.UTF-8
 
 # Pfetch
-export PF_INFO="ascii title os kernel wm shell uptime pkgs memory palette"
+export PF_INFO="ascii os kernel shell uptime pkgs memory palette"
 export PF_COL1="4"
 export PF_COL2="6"
 export PF_COL3="3"
@@ -208,3 +208,4 @@ ex=:\
 *.pdf=:\
 *.nix=:\
 "
+. "$HOME/.cargo/env"
