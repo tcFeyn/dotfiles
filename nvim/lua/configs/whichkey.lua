@@ -162,6 +162,11 @@ local mappings = {
         o = {":setlocal wrap<CR>", "On"},
         f = {":setlocal nowrap<CR>", "Off"}
   },
+
+  C = {
+    name = "Compile",
+      p = {":LLPStartPreview<CR>","Preview Latex file"},
+  },
 }
 
 which_key.setup(setup)

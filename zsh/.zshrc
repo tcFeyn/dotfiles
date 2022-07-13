@@ -69,7 +69,7 @@ git_prompt_string() {
 }
 
 # Prompt
-PROMPT='╭─ %F{blue}%n%f {%F{red}%~%}%f}
+PROMPT='╭─ (%F{blue}%n%f)-{%F{red}%~%}%f}
 ╰─$(git_prompt_string)  '
 
 # Auto/tab complete
